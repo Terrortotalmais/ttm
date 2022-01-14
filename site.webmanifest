@@ -1,23 +1,36 @@
-   {
-    "name": "Terror Total Mais",
-    "short_name": "Terror Total Mais",
-    "icons": [
-        {
-            "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiAbr1EMevNTkPOZcW7d8hhXuAH-7vllIRqyp8NAZc7i9wx_mhL7hYXF9GEoBn4U_QEtWMlCBaSEKdY9h_uaDCuo_bQkdgm4rq114CVYMYJZj-NJU2MKANt8yUjYUdnHt4trUniW0YKk-YpkL2wfdNgMlci1R1ZpEaLOOqYNNsbIcsGoOvKaEob70Hj",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "https://blogger.googleusercontent.com/img/a/AVvXsEhG1C2DMEJjH5W5cX_QK9A8BGFDOUYRgR_qjujH1_5CiVDi8imvS8sZfDNDUGoFNX-USUbtGScYMVrS88l7oLGYlmg1tJdcmLA98RK1rJvCXcUhwv8WYrZANwflDkIbuwvc2qSTZJQOaBsvhK4QtKAmsv1xI-07gkq97RktQ_Th89SI8MjahctUqpZx",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "prefer_related_applications": false,
-  "start_url": "https://www.terrortotalmais.com"
-}
+addEventListener("fetch", event => {
+  const data = {
+       "name": "Terror Total Mais",
+         "short_name": "Terror Total Mais",
+           "description": "Prepare-se para encontrar seus medos",
+             "lang": "pt-BR",
+               "display": "standalone",
+                 "background_color": "#ffffff",
+                   "start_url": "/?utm_source=homescreen",
+                     "theme_color": "#ffffff",
+                       "orientation": "portrait",
+                         "icons": [
+                             {
+      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEi40oLb0ou2MT0MKyR4Rv33moe_gbQZ2A-FLkYc18FGOSOxGB9LpyIjxCEd6EWBRdgXqzqEHguXHTqHyIfQTAVL93lGAH7njC9qxBOXafDUTukAEfwtQ9DhkzG7rWKnKw4cj-Ipm-ltO148NeuPkTIzW21rWMjlQOKyS8yjFH9LRxkcmeUUtbXX-ki6",
+      "sizes": "32x32"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiAbr1EMevNTkPOZcW7d8hhXuAH-7vllIRqyp8NAZc7i9wx_mhL7hYXF9GEoBn4U_QEtWMlCBaSEKdY9h_uaDCuo_bQkdgm4rq114CVYMYJZj-NJU2MKANt8yUjYUdnHt4trUniW0YKk-YpkL2wfdNgMlci1R1ZpEaLOOqYNNsbIcsGoOvKaEob70Hj",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEhG1C2DMEJjH5W5cX_QK9A8BGFDOUYRgR_qjujH1_5CiVDi8imvS8sZfDNDUGoFNX-USUbtGScYMVrS88l7oLGYlmg1tJdcmLA98RK1rJvCXcUhwv8WYrZANwflDkIbuwvc2qSTZJQOaBsvhK4QtKAmsv1xI-07gkq97RktQ_Th89SI8MjahctUqpZx",
+      "sizes": "512x512"
+    },
+
+                                                                                                                                                               ]
+                                                                                                                                                                                                                                                                                                      }
+  const json = JSON.stringify(data, null, 2)
+  return event.respondWith(
+      new Response(json, {
+            headers: {
+                    "content-type": "application/json;charset=UTF-8"
+                          }
+                              })
+                                )
+                                })
